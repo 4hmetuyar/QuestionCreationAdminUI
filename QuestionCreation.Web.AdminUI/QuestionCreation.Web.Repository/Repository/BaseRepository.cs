@@ -2,9 +2,13 @@
 using QuestionCreation.Web.Repository.IRepository;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using QuestionCreation.Web.Data;
+using QuestionCreation.Web.Domain.ViewModel;
+using QuestionCreation.Web.Tools.Helpers;
 
 namespace QuestionCreation.Web.Repository.Repository
 {
@@ -55,7 +59,7 @@ namespace QuestionCreation.Web.Repository.Repository
         {
             if (pageSize == 0)
             {
-                pageSize = GetPageSizeFromParameter();
+                pageSize = 10;
             }
 
             IQueryable<T> result = _dbSet.Where(x => !x.IsDeleted);
@@ -79,21 +83,14 @@ namespace QuestionCreation.Web.Repository.Repository
             return result.ToList();
         }
 
-        private int GetPageSizeFromParameter()
-        {
-            string code = ParameterCode.PageSize.ToNCString();
-            return _context.Parameters.Where(x => x.Code == code).Select(x => x.IntegerData).FirstOrDefault().Value;
-        }
 
         public virtual async Task<int> Update(T model)
         {
-            if (typeof(T) != typeof(Message))
+
+            model.UpdatedDate = DateTime.Now;
+            if (SessionHelper.Current.UserId > 0)
             {
-                model.UpdatedDate = DateTime.Now;
-                if (SessionHelper.Current.UserId > 0)
-                {
-                    model.UpdatedBy = SessionHelper.Current.UserId;
-                }
+                model.UpdatedBy = SessionHelper.Current.UserId;
             }
 
             var entity = _dbSet.Find(model.Id);
@@ -110,15 +107,13 @@ namespace QuestionCreation.Web.Repository.Repository
 
         public virtual async Task<int> Create(T model)
         {
-            if (typeof(T) != typeof(Message))
-            {
-                model.CreatedDate = DateTime.Now;
-                if (SessionHelper.Current.UserId > 0)
-                {
-                    model.CreatedBy = SessionHelper.Current.UserId;
-                }
 
+            model.CreatedDate = DateTime.Now;
+            if (SessionHelper.Current.UserId > 0)
+            {
+                model.CreatedBy = SessionHelper.Current.UserId;
             }
+
 
             var result = _dbSet.Add(model);
             await SaveChangesAsync();

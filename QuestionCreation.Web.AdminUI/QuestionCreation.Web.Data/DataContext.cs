@@ -1,12 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using QuestionCreation.Web.Data.Entities;
+using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace QuestionCreation.Web.Data
 {
-    class DataContext
+    public class DataContext : DbContext
     {
+        public static DataContext Create()
+        {
+            return new DataContext();
+        }
+
+        public DataContext() :  base("DataContext")
+        {
+
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+            base.OnModelCreating(modelBuilder);
+        }
+
+        public DbSet<Answer> AdminPages { get; set; }
+
     }
 }
