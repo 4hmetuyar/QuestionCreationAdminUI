@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace QuestionCreation.Web.Data.Entities
 {
-    public class Question
+    public class Question : BaseModel
     {
 
         public int QuestionID { get; set; }

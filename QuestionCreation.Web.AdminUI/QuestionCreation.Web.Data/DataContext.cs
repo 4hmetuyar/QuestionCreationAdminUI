@@ -6,12 +6,7 @@ namespace QuestionCreation.Web.Data
 {
     public class DataContext : DbContext
     {
-        public static DataContext Create()
-        {
-            return new DataContext();
-        }
-
-        public DataContext() :  base("DataContext")
+        public DataContext() : base("DataContext")
         {
 
         }
@@ -22,7 +17,11 @@ namespace QuestionCreation.Web.Data
             base.OnModelCreating(modelBuilder);
         }
 
-        public DbSet<Answer> AdminPages { get; set; }
+        public DbSet<Answer> Answers { get; set; }
+        public DbSet<Choice> Choices { get; set; }
+        public DbSet<Question> Questions { get; set; }
+        public DbSet<Quiz> Quizzes { get; set; }
+        public DbSet<User> Users { get; set; }
 
     }
 }

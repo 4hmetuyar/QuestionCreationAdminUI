@@ -2,7 +2,7 @@
 
 namespace QuestionCreation.Web.Data.Entities
 {
-    public partial class Choice
+    public partial class Choice : BaseModel
     {
         public int ChoiceID { get; set; }
         public string ChoiceText { get; set; }

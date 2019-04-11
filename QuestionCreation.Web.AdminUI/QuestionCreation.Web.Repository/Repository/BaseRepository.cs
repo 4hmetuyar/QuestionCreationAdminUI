@@ -88,10 +88,7 @@ namespace QuestionCreation.Web.Repository.Repository
         {
 
             model.UpdatedDate = DateTime.Now;
-            if (SessionHelper.Current.UserId > 0)
-            {
-                model.UpdatedBy = SessionHelper.Current.UserId;
-            }
+          
 
             var entity = _dbSet.Find(model.Id);
             if (entity == null)
@@ -109,10 +106,7 @@ namespace QuestionCreation.Web.Repository.Repository
         {
 
             model.CreatedDate = DateTime.Now;
-            if (SessionHelper.Current.UserId > 0)
-            {
-                model.CreatedBy = SessionHelper.Current.UserId;
-            }
+           
 
 
             var result = _dbSet.Add(model);
@@ -126,7 +120,6 @@ namespace QuestionCreation.Web.Repository.Repository
                 return 0;
 
             _context.Entry(model).Entity.UpdatedDate = DateTime.Now;
-            _context.Entry(model).Entity.UpdatedBy = SessionHelper.Current.UserId;
             _context.Entry(model).Entity.IsDeleted = true;
             _context.Entry(model).Entity.IsActive = false;
 
