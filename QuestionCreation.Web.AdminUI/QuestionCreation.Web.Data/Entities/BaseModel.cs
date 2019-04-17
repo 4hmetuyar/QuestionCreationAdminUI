@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace QuestionCreation.Web.Data.Entities
 {
@@ -10,31 +9,26 @@ namespace QuestionCreation.Web.Data.Entities
         public int Id { get; set; }
        
 
-        private DateTime? createdDate;
+        private DateTime? _createdDate;
 
         [Required]
         public DateTime CreatedDate
         {
             get
             {
-                if (createdDate == null)
+                if (_createdDate == null)
                 {
-                    createdDate = DateTime.Now;
+                    _createdDate = DateTime.Now;
                 }
-                return createdDate.Value;
+                return _createdDate.Value;
             }
-            set { createdDate = value; }
+            set => _createdDate = value;
         }
-
-
       
         public DateTime? UpdatedDate { get; set; }
         [DefaultValue("True")]
         public bool IsActive { get; set; }
         public bool IsDeleted { get; set; }
-
-
- 
-
+        
     }
 }

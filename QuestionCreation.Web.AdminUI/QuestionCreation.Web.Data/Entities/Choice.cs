@@ -4,9 +4,8 @@ namespace QuestionCreation.Web.Data.Entities
 {
     public partial class Choice : BaseModel
     {
-        public int ChoiceID { get; set; }
         public string ChoiceText { get; set; }
-        public Nullable<int> QuestionID { get; set; }
+        public int? QuestionId { get; set; }
 
         public virtual Question Question { get; set; }
     }
