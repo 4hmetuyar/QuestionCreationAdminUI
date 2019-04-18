@@ -72,17 +72,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IService\IAnswerService.cs" />
-    <Compile Include="IService\IBaseService.cs" />
-    <Compile Include="IService\IQuestionService.cs" />
-    <Compile Include="IService\IQuizService.cs" />
-    <Compile Include="IService\IUserService.cs" />
+    <Compile Include="IServices\IAnswerService.cs" />
+    <Compile Include="IServices\IBaseService.cs" />
+    <Compile Include="IServices\IQuestionService.cs" />
+    <Compile Include="IServices\IQuizService.cs" />
+    <Compile Include="IServices\IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service\AnswerService.cs" />
-    <Compile Include="Service\BaseService.cs" />
-    <Compile Include="Service\QuestionService.cs" />
-    <Compile Include="Service\QuizService.cs" />
-    <Compile Include="Service\UserService.cs" />
+    <Compile Include="Services\AnswerService.cs" />
+    <Compile Include="Services\BaseService.cs" />
+    <Compile Include="Services\QuestionService.cs" />
+    <Compile Include="Services\QuizService.cs" />
+    <Compile Include="Services\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
