@@ -42,12 +42,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\AnswerViewModel.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\QuestionViewModel.cs" />
+    <Compile Include="ViewModel\QuizViewModel.cs" />
+    <Compile Include="ViewModel\UserViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataTransferObjects\" />
     <Folder Include="Enums\" />
     <Folder Include="InputModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QuestionCreation.Web.Data\QuestionCreation.Web.Data.csproj">
+      <Project>{e0e2c0e7-eb34-47c6-ba46-4ca6211fbba3}</Project>
+      <Name>QuestionCreation.Web.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
