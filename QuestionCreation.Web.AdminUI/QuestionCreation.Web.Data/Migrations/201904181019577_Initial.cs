@@ -3,7 +3,7 @@ namespace QuestionCreation.Web.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initial : DbMigration
+    public partial class Initial : DbMigration
     {
         public override void Up()
         {
@@ -11,54 +11,56 @@ namespace QuestionCreation.Web.Data.Migrations
                 "dbo.Answers",
                 c => new
                     {
-                        AnswerID = c.Int(nullable: false, identity: true),
+                        Id = c.Int(nullable: false, identity: true),
+                        QuestionId = c.Int(),
                         AnswerText = c.String(),
-                        QuestionID = c.Int(),
+                        IsRightAnswer = c.Boolean(nullable: false),
+                        CreatedDate = c.DateTime(nullable: false),
+                        UpdatedDate = c.DateTime(),
+                        IsActive = c.Boolean(nullable: false),
+                        IsDeleted = c.Boolean(nullable: false),
                     })
-                .PrimaryKey(t => t.AnswerID)
-                .ForeignKey("dbo.Questions", t => t.QuestionID)
-                .Index(t => t.QuestionID);
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Questions", t => t.QuestionId)
+                .Index(t => t.QuestionId);
             
             CreateTable(
                 "dbo.Questions",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        QuestionID = c.Int(nullable: false),
+                        QuizId = c.Int(),
+                        QuestionTypeId = c.Int(nullable: false),
                         QuestionText = c.String(),
-                        QuizID = c.Int(),
                         CreatedDate = c.DateTime(nullable: false),
                         UpdatedDate = c.DateTime(),
                         IsActive = c.Boolean(nullable: false),
                         IsDeleted = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Quizs", t => t.QuizID)
-                .Index(t => t.QuizID);
+                .ForeignKey("dbo.QuestionTypes", t => t.QuestionTypeId)
+                .ForeignKey("dbo.Quizs", t => t.QuizId)
+                .Index(t => t.QuizId)
+                .Index(t => t.QuestionTypeId);
             
             CreateTable(
-                "dbo.Choices",
+                "dbo.QuestionTypes",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        ChoiceID = c.Int(nullable: false),
-                        ChoiceText = c.String(),
-                        QuestionID = c.Int(),
+                        Name = c.String(),
                         CreatedDate = c.DateTime(nullable: false),
                         UpdatedDate = c.DateTime(),
                         IsActive = c.Boolean(nullable: false),
                         IsDeleted = c.Boolean(nullable: false),
                     })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Questions", t => t.QuestionID)
-                .Index(t => t.QuestionID);
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.Quizs",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        QuizID = c.Int(nullable: false),
                         QuizName = c.String(),
                         CreatedDate = c.DateTime(nullable: false),
                         UpdatedDate = c.DateTime(),
@@ -85,15 +87,15 @@ namespace QuestionCreation.Web.Data.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.Questions", "QuizID", "dbo.Quizs");
-            DropForeignKey("dbo.Choices", "QuestionID", "dbo.Questions");
-            DropForeignKey("dbo.Answers", "QuestionID", "dbo.Questions");
-            DropIndex("dbo.Choices", new[] { "QuestionID" });
-            DropIndex("dbo.Questions", new[] { "QuizID" });
-            DropIndex("dbo.Answers", new[] { "QuestionID" });
+            DropForeignKey("dbo.Questions", "QuizId", "dbo.Quizs");
+            DropForeignKey("dbo.Questions", "QuestionTypeId", "dbo.QuestionTypes");
+            DropForeignKey("dbo.Answers", "QuestionId", "dbo.Questions");
+            DropIndex("dbo.Questions", new[] { "QuestionTypeId" });
+            DropIndex("dbo.Questions", new[] { "QuizId" });
+            DropIndex("dbo.Answers", new[] { "QuestionId" });
             DropTable("dbo.Users");
             DropTable("dbo.Quizs");
-            DropTable("dbo.Choices");
+            DropTable("dbo.QuestionTypes");
             DropTable("dbo.Questions");
             DropTable("dbo.Answers");
         }

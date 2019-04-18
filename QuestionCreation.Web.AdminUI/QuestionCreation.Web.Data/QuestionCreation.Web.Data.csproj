@@ -57,13 +57,13 @@
     <Compile Include="DataContext.cs" />
     <Compile Include="Entities\Answer.cs" />
     <Compile Include="Entities\BaseModel.cs" />
-    <Compile Include="Entities\Choice.cs" />
     <Compile Include="Entities\Question.cs" />
+    <Compile Include="Entities\QuestionType.cs" />
     <Compile Include="Entities\Quiz.cs" />
     <Compile Include="Entities\User.cs" />
-    <Compile Include="Migrations\201904111333243_initial.cs" />
-    <Compile Include="Migrations\201904111333243_initial.Designer.cs">
-      <DependentUpon>201904111333243_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201904181019577_Initial.cs" />
+    <Compile Include="Migrations\201904181019577_Initial.Designer.cs">
+      <DependentUpon>201904181019577_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,8 +73,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904111333243_initial.resx">
-      <DependentUpon>201904111333243_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904181019577_Initial.resx">
+      <DependentUpon>201904181019577_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
