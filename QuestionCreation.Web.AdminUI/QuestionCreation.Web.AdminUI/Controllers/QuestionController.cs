@@ -9,5 +9,14 @@ namespace QuestionCreation.Web.AdminUI.Controllers
         {
             return View();
         }
+
+        /// <summary>
+        /// This method is question create.
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Create()
+        {
+            return View();
+        }
     }
 }
