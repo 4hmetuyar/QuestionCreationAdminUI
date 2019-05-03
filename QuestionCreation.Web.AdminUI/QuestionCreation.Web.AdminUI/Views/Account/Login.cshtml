@@ -51,32 +51,45 @@
                         <div class="columns">
                             <div class="column is-8 is-offset-2">
                                 <!-- Login Form -->
-                                <form>
-                                    <div id="signin-form" class="login-form animated preFadeInLeft fadeInLeft">
-                                        <!-- Input -->
-                                        <div class="field pb-10">
-                                            <div class="control has-icons-right">
-                                                <input class="input is-large" type="text" placeholder="Username">
-                                                <span class="icon is-medium is-right">
-                                                    <i class="sl sl-icon-user"></i>
-                                                </span>
+                            @using (Html.BeginForm("Login", "Account", new {ReturnUrl = ViewBag.ReturnUrl}, FormMethod.Post, new {@class = "form-horizontal form-validation", role = "form"}))
+                            {
+                                @Html.AntiForgeryToken()
+
+                                <div id="signin-form" class="login-form animated preFadeInLeft fadeInLeft">
+
+                                    @if (ViewBag.Message != null)
+                                    {
+                                        <div class="form-message">
+                                            <div class="alert alert-danger fade in">
+                                                <a href="#" class="close" data-dismiss="alert" aria-label="close" title="Close">×</a>
+                                                @ViewBag.Message
                                             </div>
                                         </div>
-                                        <!-- Input -->
-                                        <div class="field pb-10">
-                                            <div class="control has-icons-right">
-                                                <input class="input is-large" type="text" placeholder="Password">
-                                                <span class="icon is-medium is-right">
-                                                    <i class="sl sl-icon-lock"></i>
-                                                </span>
-                                            </div>
+                                    }
+                                    <!-- Input -->
+                                    <div class="field pb-10">
+                                        <div class="control has-icons-right">
+                                            <input class="input is-large" type="text" name="Username" placeholder="Username">
+                                            <span class="icon is-medium is-right">
+                                                <i class="sl sl-icon-user"></i>
+                                            </span>
                                         </div>
-                                        <!-- Submit -->
-                                        <p class="control login">
-                                            <button class="button button-cta primary-btn btn-align-lg btn-outlined is-bold is-fullwidth rounded raised no-lh">Log in</button>
-                                        </p>
                                     </div>
-                                </form>
+                                    <!-- Input -->
+                                    <div class="field pb-10">
+                                        <div class="control has-icons-right">
+                                            <input class="input is-large" type="password" name="Password" placeholder="Password">
+                                            <span class="icon is-medium is-right">
+                                                <i class="sl sl-icon-lock"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- Submit -->
+                                    <p class="control login">
+                                        <button class="button button-cta primary-btn btn-align-lg btn-outlined is-bold is-fullwidth rounded raised no-lh" type="submit">Log in</button>
+                                    </p>
+                                </div>
+                            }
                                 <!-- /Login Form -->
                                 <!-- Reset Form -->
                                 <form>

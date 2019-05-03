@@ -11,9 +11,18 @@ namespace QuestionCreation.Web.AdminUI.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
         public ActionResult Login(LoginModel loginModel)
         {
-            return View();
+            if (!ModelState.IsValid)
+            {
+                return View(loginModel);
+            }
+            
+
+             
+            return RedirectToAction("Index","Home");
         }
     }
 }
