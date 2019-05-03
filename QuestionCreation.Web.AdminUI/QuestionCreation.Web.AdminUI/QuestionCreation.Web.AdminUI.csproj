@@ -451,6 +451,7 @@
     <Content Include="assets\images\photos\captures\startup-login.png" />
     <Content Include="assets\images\photos\captures\startup-product.png" />
     <Content Include="assets\images\photos\captures\startup-signup.png" />
+    <Content Include="assets\images\question-answer.png" />
     <Content Include="assets\js\billboardjs\billboard.min.css" />
     <Content Include="assets\js\billboardjs\billboard.min.js" />
     <Content Include="assets\js\chartjs\Chart.bundle.min.js" />
