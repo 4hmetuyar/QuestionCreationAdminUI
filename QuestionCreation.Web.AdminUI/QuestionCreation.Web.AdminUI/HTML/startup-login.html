@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bulkit - Agency, Startup and SaaS template</title>
+        <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+        <!-- Core css -->
+        <link rel="stylesheet" id="bulma" href="assets/css/bulma.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/core.css">
+        <!-- Icons -->
+        <link rel="stylesheet" type="text/css" href="assets/css/icons.min.css">
+        <!-- Google fonts -->
+        <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Lato:300,400,700'>
+    </head>
+
+    <body>
+        <!-- Pageloader -->
+        <div class="pageloader"></div>
+        <div class="infraloader is-active"></div>
+
+        <!-- Wrapper -->
+        <div class="login-wrapper columns is-gapless">
+
+            <!-- Image section (hidden on mobile) -->
+            <div class="column login-column is-8 is-hidden-mobile hero-banner">
+                <div class="hero login-hero is-fullheight has-background-image" data-background="https://place-hold.it/1600x1064">
+                    <div class="hero-footer">
+                        <p class="has-text-centered"></p>
+                    </div>
+                </div>  
+            </div>
+            <!-- /Image section -->
+
+            <!-- Form section -->
+            <div class="column is-4">
+                <div class="hero is-fullheight">
+                    <div class="hero-heading">
+                        <div class="section has-text-centered">
+                            <a href="startup.html"><img class="top-logo" src="assets/images/logos/bulkit-logo.png" alt="Bulkit logo"></a>
+                        </div>
+                        <div class="no-account-link has-text-centered">
+                            <a href="startup-signup.html"><i class="sl sl-icon-question pr-10"></i> I do not have an account yet </a>
+                        </div>
+                    </div>
+                    <div class="hero-body">
+                        <div class="container">
+                            <div class="columns">
+                                <div class="column is-8 is-offset-2">
+                                    <!-- Login Form -->
+                                    <form>
+                                        <div id="signin-form" class="login-form animated preFadeInLeft fadeInLeft">
+                                            <!-- Input -->
+                                            <div class="field pb-10">
+                                                <div class="control has-icons-right">
+                                                    <input class="input is-large" type="text" placeholder="Username">
+                                                    <span class="icon is-medium is-right">
+                                                        <i class="sl sl-icon-user"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- Input -->
+                                            <div class="field pb-10">
+                                                <div class="control has-icons-right">
+                                                    <input class="input is-large" type="text" placeholder="Password">
+                                                    <span class="icon is-medium is-right">
+                                                        <i class="sl sl-icon-lock"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- Submit -->
+                                            <p class="control login">
+                                                <button class="button button-cta primary-btn btn-align-lg btn-outlined is-bold is-fullwidth rounded raised no-lh">Log in</button>
+                                            </p>
+                                        </div>
+                                    </form>
+                                    <!-- /Login Form -->
+                                    
+                                    <!-- Reset Form -->
+                                    <form>
+                                        <div id="recover-form" class="login-form animated preFadeInLeft fadeInLeft is-hidden">
+                                            <!-- Input -->
+                                            <div class="field pb-10">
+                                                <div class="control has-icons-right">
+                                                    <input class="input is-large" type="text" placeholder="Email address">
+                                                    <span class="icon is-medium is-right">
+                                                        <i class="sl sl-icon-paper-plane"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- Submit -->
+                                            <p class="control login">
+                                                <button class="button button-cta secondary-btn btn-align-lg btn-outlined is-bold is-fullwidth rounded raised no-lh">Reset password</button>
+                                            </p>
+                                        </div>
+                                    </form>
+                                    <!-- /Reset Form -->
+                                    
+                                    <!-- Toggles -->
+                                    <div id="recover" class="section forgot-password animated preFadeInLeft fadeInLeft">
+                                        <p class="has-text-centered">
+                                            <a href="#">Forgot password ?</a>
+                                        </p>
+                                    </div>
+
+                                    <div id="back-to-login" class="section forgot-password animated preFadeInLeft fadeInLeft is-hidden">
+                                        <p class="has-text-centered">
+                                            <a href="#">Back to Sign in</a>
+                                        </p>
+                                    </div>
+                                    <!-- /Toggles -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            <!-- /Form section -->
+
+        </div>
+        <!-- /Wrapper -->
+
+
+
+        <!-- Core js -->
+        <script src="assets/js/core/jquery.min.js"></script>
+        <script src="assets/js/core/modernizr.min.js"></script>
+        <!-- Bulkit js -->
+        <script src="assets/js/main.js"></script>
+        <!-- Page specific js -->
+        <script src="assets/js/pages/auth.js"></script>
+
+    </body>
+</html>
