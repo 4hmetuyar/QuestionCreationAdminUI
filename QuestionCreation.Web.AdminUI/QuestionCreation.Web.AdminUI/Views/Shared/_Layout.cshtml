@@ -31,7 +31,7 @@
                     <nav class="nav">
                         <div class="container big">
                             <div class="nav-left">
-                                <a class="nav-item" href="landing-v3.html">
+                                <a class="nav-item" href="@Url.Action("Index","Home")">
                                     <img src="~/assets/images/logos/bulkit-logo-lemonade.png" alt="">
                                 </a>
                                 <!-- Sidebar trigger -->
@@ -46,13 +46,13 @@
                                         </span>
                                     </span>
                                 </a>
-                                <a href="landing-v3-pricing.html" class="nav-item is-tab nav-inner is-not-mobile">
+                                <a href="@Url.Action("Index","Pricing")" class="nav-item is-tab nav-inner is-not-mobile">
                                     Pricing
                                 </a>
-                                <a href="landing-v3-help.html" class="nav-item is-tab nav-inner is-not-mobile">
+                                <a href="@Url.Action("Index","Help")" class="nav-item is-tab nav-inner is-not-mobile">
                                     Help
                                 </a>
-                                <a href="landing-v3-login.html" class="nav-item is-tab nav-inner is-not-mobile">
+                                <a href="@Url.Action("Login","Account")" class="nav-item is-tab nav-inner is-not-mobile">
                                     Login
                                 </a>
                             </div>
@@ -64,17 +64,17 @@
                             </span>
                             <div class="nav-right nav-menu">
 
-                                <a href="landing-v3-pricing.html" class="nav-item is-tab nav-inner is-menu-mobile">
+                                <a href="@Url.Action("Index","Pricing")" class="nav-item is-tab nav-inner is-menu-mobile">
                                     Pricing
                                 </a>
-                                <a href="landing-v3-help.html" class="nav-item is-tab nav-inner is-menu-mobile">
+                                <a href="@Url.Action("Index","Help")" class="nav-item is-tab nav-inner is-menu-mobile">
                                     Help
                                 </a>
-                                <a href="landing-v3-login.html" class="nav-item is-tab nav-inner is-menu-mobile">
+                                <a href="@Url.Action("Login","Account")" class="nav-item is-tab nav-inner is-menu-mobile">
                                     Login
                                 </a>
                                 <span class="nav-item">
-                                    <a id="signup-btn" href="landing-v3-signup.html" class="button button-signup btn-outlined is-bold btn-align primary-btn rounded">
+                                    <a id="signup-btn" href="@Url.Action("Register","Account")" class="button button-signup btn-outlined is-bold btn-align primary-btn rounded">
                                         Sign up
                                     </a>
                                 </span>
@@ -257,11 +257,11 @@
                 <li class="has-children">
                     <a class="parent-link" href="#"><span class="material-icons">chat_bubble</span>Landing kit v3</a>
                     <ul>
-                        <li><a class="is-submenu" href="landing-v2.html">Landing page</a></li>
-                        <li><a class="is-submenu" href="landing-v2-features.html">Feature page</a></li>
-                        <li><a class="is-submenu" href="landing-v2-pricing.html">Pricing page</a></li>
-                        <li><a class="is-submenu" href="landing-v2-login.html">Login page</a></li>
-                        <li><a class="is-submenu" href="landing-v2-signup.html">Signup page</a></li>
+                        <li><a class="is-submenu" href="@Url.Action("Index","Home")">Landing page</a></li>
+                        <li><a class="is-submenu" href="@Url.Action("Index","Feature")">Feature page</a></li>
+                        <li><a class="is-submenu" href="@Url.Action("Index","Pricing")">Pricing page</a></li>
+                        <li><a class="is-submenu" href="@Url.Action("Login","Account")">Login page</a></li>
+                        <li><a class="is-submenu" href="@Url.Action("Register","Account")">Signup page</a></li>
                     </ul>
                 </li>
                 <li class="has-children active-section">

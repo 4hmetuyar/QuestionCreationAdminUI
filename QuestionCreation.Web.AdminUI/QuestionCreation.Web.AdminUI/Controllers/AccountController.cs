@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using QuestionCreation.Web.AdminUI.Models;
 
 namespace QuestionCreation.Web.AdminUI.Controllers
 {
@@ -23,6 +24,20 @@ namespace QuestionCreation.Web.AdminUI.Controllers
 
              
             return RedirectToAction("Index","Home");
+        }
+
+        [HttpGet]
+        public ActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public ActionResult Register(RegisterModel model)
+        {
+            return View();
         }
     }
 }
