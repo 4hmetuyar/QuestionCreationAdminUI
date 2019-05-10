@@ -1,7 +1,211 @@
 ﻿
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Question Create";
 }
 
-<h2>Create</h2>
+@section style
+{
+    <!-- Plugins css -->
+    <link rel="stylesheet" type="text/css" href="~/assets/js/chosen/chosen.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/js/tagsinput/jquery.tags.input.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/js/datepicker/datepicker.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/js/datedropper/datedropper.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/js/datedropper/datedropper-theme.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/js/wickedpicker/wickedpicker.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/js/timedropper/timedropper.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/js/highlightjs/style.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/js/easyAutocomplete/easy-autocomplete.css"> 
+    <link rel="stylesheet" type="text/css" href="~/assets/js/ggpopover/ggtooltip.css">
+    <!-- Icons -->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/icons.min.css">
+
+}
+
+<!-- Horizontal forms -->
+<section class="section section-feature-grey is-medium">
+    <div class="section-title-wrapper has-text-centered">
+        <div class="bg-number">2</div>
+        <h2 class="title section-title has-text-centered dark-text text-bold">
+            Horizontal forms
+        </h2>
+    </div>
+
+    <div class="columns is-vcentered">
+        <div class="column is-4 is-offset-4">
+            <div class="info-block has-text-centered">
+                <h4>2 Columns</h4>
+                <p>You can chose to diplay your forms in a horizontal layout. The example below shows a form with a two columns layout.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2 columns -->
+    <div class="columns is-vcentered">
+        <div class="column is-6 is-offset-3">
+            <div class="flex-card light-bordered light-raised">
+                <div class="card-body">
+                    <h2 class="title is-4 text-bold mb-20">Create project</h2>
+                    <form>
+                        <div class="columns mt-50">
+                            <div class="column">
+                                <div class="control">
+                                    <label>Project ID</label>
+                                    <input class="input is-medium mt-5" type="text">
+                                </div>
+                                <div class="control">
+                                    <label>Project category</label>
+                                    <div class="mt-5"></div>
+                                    <select class="chosen-select" data-placeholder="Project category">
+                                        <option label="Project category"></option>
+                                        <option>Marketing</option>
+                                        <option>Sales</option>
+                                        <option>Support</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="control">
+                                    <label>Project name</label>
+                                    <input class="input is-medium mt-5" type="text">
+                                </div>
+                                <div class="control">
+                                    <label>Project type</label>
+                                    <div class="mt-5"></div>
+                                    <select class="chosen-select" data-placeholder="Project type">
+                                        <option label="Project type"></option>
+                                        <option>Kanban</option>
+                                        <option>Scrum</option>
+                                        <option>List</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column">
+                                <div class="control">
+                                    <textarea class="textarea is-grow" rows="5" placeholder="Enter a project description ..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-30">
+                            <button class="button btn-align no-lh raised primary-btn">Create</button>
+                            <button class="button is-link no-lh">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 2 columns -->
+
+    <div class="columns is-vcentered pt-60">
+        <div class="column is-4 is-offset-4">
+            <div class="info-block has-text-centered">
+                <h4>3 Columns</h4>
+                <p>You can chose to diplay your forms in a horizontal layout. The example below shows a form with a three columns layout.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3 columns -->
+    <div class="columns is-vcentered">
+        <div class="column is-6 is-offset-3">
+            <div class="flex-card light-bordered light-raised">
+                <div class="card-body">
+                    <h2 class="title is-4 text-bold mb-20">Create project</h2>
+                    <form>
+                        <div class="columns mt-50">
+                            <div class="column">
+                                <div class="control">
+                                    <label>Project ID</label>
+                                    <input class="input is-medium mt-5" type="text">
+                                </div>
+                                <div class="control">
+                                    <label>Project category</label>
+                                    <div class="mt-5"></div>
+                                    <select class="chosen-select" data-placeholder="Project category">
+                                        <option label="Project category"></option>
+                                        <option>Marketing</option>
+                                        <option>Sales</option>
+                                        <option>Support</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="control">
+                                    <label>Project name</label>
+                                    <input class="input is-medium mt-5" type="text">
+                                </div>
+                                <div class="control">
+                                    <label>Project type</label>
+                                    <div class="mt-5"></div>
+                                    <select class="chosen-select" data-placeholder="Project type">
+                                        <option label="Project type"></option>
+                                        <option>Kanban</option>
+                                        <option>Scrum</option>
+                                        <option>List</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="control">
+                                    <label>Department</label>
+                                    <input class="input is-medium mt-5" type="text">
+                                </div>
+                                <div class="control">
+                                    <label>Project size</label>
+                                    <div class="mt-5"></div>
+                                    <select class="chosen-select" data-placeholder="Project size">
+                                        <option label="Project size"></option>
+                                        <option>Small business</option>
+                                        <option>Corporate</option>
+                                        <option>Major</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column">
+                                <div class="control">
+                                    <textarea class="textarea is-grow" rows="5" placeholder="Enter a project description ..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-30">
+                            <button class="button btn-align no-lh raised primary-btn">Create</button>
+                            <button class="button is-link no-lh">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 3 columns -->
+
+</section>
+<!-- /Horizontal forms -->
+@section scripts
+{
+    <!-- Plugins js -->
+    <script src="~/assets/js/scrollspy/scrollspy.min.js"></script>
+    <script src="~/assets/js/waypoints/jquery.waypoints.min.js"></script>
+    <script src="~/assets/js/waypoints/sticky.min.js"></script>
+    <script src="~/assets/js/vivus/vivus.min.js"></script>
+    <script src="~/assets/js/ggpopover/ggtooltip.js"></script>
+    <script src="~/assets/js/highlightjs/highlight.pack.js"></script>
+    <script src="~/assets/js/easyAutocomplete/jquery.easy-autocomplete.min.js"></script> 
+    <script src="~/assets/js/chosen/chosen.jquery.min.js"></script>
+    <script src="~/assets/js/tagsinput/jquery.tags.input.js"></script>
+    <script src="~/assets/js/datepicker/datepicker.min.js"></script>
+    <script src="~/assets/js/datedropper/datedropper.min.js"></script>
+    <script src="~/assets/js/wickedpicker/wickedpicker.min.js"></script>
+    <script src="~/assets/js/timedropper/timedropper.min.js"></script>
+    <!-- Bulkit js -->
+    <script src="~/assets/js/main.js"></script>
+    <!-- Page specific js -->
+    <script src="~/assets/js/pages/demo.js"></script>
+    <script src="~/assets/js/pages/components-inputs.js"></script>
+    <script src="~/assets/js/pages/components-range.js"></script>
+    <script src="~/assets/js/pages/components-fileinput.js"></script>
+}
 

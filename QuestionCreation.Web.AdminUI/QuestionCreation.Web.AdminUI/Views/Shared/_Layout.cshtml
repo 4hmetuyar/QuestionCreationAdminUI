@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="~/assets/js/ggpopover/ggtooltip.css">
     <!-- Icons -->
     <link rel="stylesheet" type="text/css" href="~/assets/css/icons.min.css">
+    @RenderSection("style", false)
 </head>
 
 <body>
@@ -229,8 +230,8 @@
                         <li><a class="is-submenu" href="startup-signup.html">Sign up</a></li>
                     </ul>
                 </li>
-               
-               
+
+
                 <li class="has-children">
                     <a class="parent-link" href="#"><span class="material-icons">chat_bubble</span>Landing kit v3</a>
                     <ul>
@@ -241,7 +242,7 @@
                         <li><a class="is-submenu" href="@Url.Action("Register","Account")">Signup page</a></li>
                     </ul>
                 </li>
-               
+
             </ul>
         </div>
         <!-- /Navigation menu -->
@@ -407,6 +408,6 @@
     <!-- Page specific js -->
     <script src="~/assets/js/pages/landingv3.js"></script>
     <script src="~/assets/js/pages/components-modals.js"></script>
-
+    @RenderSection("scripts", false)
 </body>
 </html>
