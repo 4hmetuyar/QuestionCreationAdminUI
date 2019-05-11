@@ -18,5 +18,10 @@ namespace QuestionCreation.Web.AdminUI.Controllers
         {
             return View();
         }
+
+        public ActionResult Update()
+        {
+            return View();
+        }
     }
 }
