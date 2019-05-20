@@ -3,5 +3,141 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<!-- Hero and nav -->
+<div class="hero is-relative is-theme-info is-bold">
+  <!-- Hero image -->
+    <div id="main-hero" class="hero-body">
+        <div class="container has-text-centered">
+            <div class="columns is-vcentered">
+                <div class="column is-4 is-offset-1 has-text-left">
+                    <h1 class="title components-title is-1">
+                        Question Create
+                    </h1>
+                    <h2 class="subtitle is-4 components-subtitle">
+                        Available table styles.
+                    </h2>
+                    <p class="components-cta">
+                        <a href="@Url.Action("Create","Question")" class="button button-cta btn-align light-btn btn-outlined is-bold rounded">
+                            New Question
+                        </a>
+                    </p>
+                </div>
+                <div class="column is-offset-1 has-text-centered is-hidden-mobile">
+                    <div id="tables-ill" class="vivus-svg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Hero image -->
+</div>
+<!-- /Hero and nav -->
+
+
+<section id="tables" class="section is-medium">
+    <div class="container">
+        <div class="section-title-wrapper has-text-centered">
+            <div class="bg-number">1</div>
+            <h2 class="title section-title has-text-centered dark-text text-bold">
+                Bulma Tables
+            </h2>
+        </div>
+
+        <!-- Basic table -->
+        <div class="columns is-vcentered">
+            <div id="basic" class="column is-6 is-offset-3">
+                <div class="info-block has-text-centered">
+                    <h4>Basic Table</h4>
+                    <p class="no-padding">
+                        Burada sorular listelenecek.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="columns is-vcentered pt-30">
+            <!-- Demo section -->
+            <div class="column is-10 is-offset-1">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Username</th>
+                            <th>Position</th>
+                            <th>Role</th>
+                            <th>Current projects</th>
+                            <th>Specialized in</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><a>Michael Hoffman</a></td>
+                            <td>Engineer</td>
+                            <td>Admin</td>
+                            <td>21 projects</td>
+                            <td>Php, Javascript, Html & CSS</td>
+                            <td><button class="button is-small btn-align accent-btn raised rounded btn-outlined">Hire now</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><a>Marjory Cambell</a></td>
+                            <td>Sales Rep</td>
+                            <td>Contributor</td>
+                            <td>03 projects</td>
+                            <td>Sales and Marketing</td>
+                            <td><button class="button is-small btn-align accent-btn raised rounded btn-outlined">Hire now</button></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><a>Kevin Smith</a></td>
+                            <td>Engineer</td>
+                            <td>Collaborator</td>
+                            <td>12 projects</td>
+                            <td>Javascript, Angular, Vue js</td>
+                            <td><button class="button is-small btn-align accent-btn raised rounded btn-outlined">Hire now</button></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><a>Adrian Fallow</a></td>
+                            <td>Sales Manager</td>
+                            <td>Reader</td>
+                            <td>07 projects</td>
+                            <td>Sales and email marketing</td>
+                            <td><button class="button is-small btn-align accent-btn raised rounded btn-outlined">Hire now</button></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><a>Helen Miller</a></td>
+                            <td>Marketing Manager</td>
+                            <td>Collaborator</td>
+                            <td>03 projects</td>
+                            <td>Sales and email marketing</td>
+                            <td><button class="button is-small btn-align accent-btn raised rounded btn-outlined">Hire now</button></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><a>Sarah Mitchells</a></td>
+                            <td>Accountant</td>
+                            <td>Collaborator</td>
+                            <td>01 projects</td>
+                            <td>Finance and Accounting</td>
+                            <td><button class="button is-small btn-align accent-btn raised rounded btn-outlined">Hire now</button></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><a>Kareem Jabbar</a></td>
+                            <td>Accountant</td>
+                            <td>Manager</td>
+                            <td>14 projects</td>
+                            <td>Finance and Accounting</td>
+                            <td><button class="button is-small btn-align accent-btn raised rounded btn-outlined">Hire now</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- /Basic table -->
+    </div>
+</section>
 
