@@ -1335,6 +1335,8 @@
     <Content Include="Views\Question\Create.cshtml" />
     <Content Include="Views\Quiz\Index.cshtml" />
     <Content Include="Views\Question\Update.cshtml" />
+    <Content Include="Views\Quiz\Create.cshtml" />
+    <Content Include="Views\Quiz\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
