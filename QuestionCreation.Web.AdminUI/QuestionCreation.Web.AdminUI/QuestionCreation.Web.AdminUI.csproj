@@ -178,6 +178,7 @@
     <Compile Include="Controllers\PricingController.cs" />
     <Compile Include="Controllers\QuestionController.cs" />
     <Compile Include="Controllers\QuizController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Models\RegisterModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Global.asax.cs">
@@ -1335,11 +1336,14 @@
     <Content Include="Views\Question\Create.cshtml" />
     <Content Include="Views\Quiz\Index.cshtml" />
     <Content Include="Views\Question\Update.cshtml" />
+    <Content Include="Views\Quiz\Create.cshtml" />
+    <Content Include="Views\Quiz\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Helpers\" />
     <Folder Include="Views\Base\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
