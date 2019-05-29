@@ -6,7 +6,7 @@ using QuestionCreation.Web.Data.Entities;
 
 namespace QuestionCreation.Web.AdminUI.Controllers
 {
-    public class QuizController : Controller
+    public class QuizController : BaseController
     {
         #region Ctor
         private readonly IQuizService _quizService;
